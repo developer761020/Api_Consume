@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>User details</h1>
+ <div class = "main_container">
+  <div class="row">
+   <div class="left">User Id:</div>
+   <div class="left" th:text="${user.id}"></div>
+  </div>
+  
+  <div class="row">
+   <div class="left">Name: </div>
+   <div class="left" th:text="${user.name}"></div>
+  </div>
+  
+  <div class="row">
+   <div class="left">Email: </div>
+   <div class="left" th:text="${user.email}"></div>
+  </div>
+  
+  <div class="row">
+   <div class="left">Address: </div>
+   <div class="left" 
+    th:text="${address.street + ', ' + address.suite + ', ' + address.city + ', ' + address.zipcode}">
+   </div>
+  </div>
+  
+  <div class="row">
+   <div class="left">Geo: </div>
+   <div class="left" th:text="${geo.lat + ', ' + geo.lan}"></div>
+  </div>
+  
+  <div class="row">
+   <div class="left">Company: </div>
+   <div class="left" th:text="${cmp.name + ', ' + cmp.bs}"></div>
+  </div>
+ </div>
+</body>
+</html>
